@@ -21,5 +21,9 @@ namespace Functional_programming
             string[] parts = s.Split('@');
             Console.WriteLine(parts[0]);
         };
+        public static Action<List<string>> PrintCoolPeople = (l) =>
+        {
+            foreach (string s in l) Console.WriteLine(s);
+        };
     }
 }

@@ -12,7 +12,8 @@
             //Console.WriteLine(Exercises001.CheckValidEmail("rich1222@northcoders.co.uk"));
             Console.WriteLine(String.Join(", \n", Exercises002.GetCoolPeople()));
             List<string> list = Exercises002.GetCoolPeople();
-            list.ForEach(x => Exercises002.GetUserNames(x));
+            Exercises002.PrintCoolPeople(list);
+            //list.ForEach(x => Exercises002.GetUserNames(x));
         }
     }
 }
