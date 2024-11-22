@@ -16,5 +16,10 @@ namespace Functional_programming
             "alice.yang@midfielder.com",
             "pippa.austin@musician.com"
             ];
+        public static Action<string> GetUserNames = (s) =>
+        {
+            string[] parts = s.Split('@');
+            Console.WriteLine(parts[0]);
+        };
     }
 }
