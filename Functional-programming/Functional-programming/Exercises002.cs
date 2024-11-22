@@ -14,6 +14,10 @@
             string[] parts = s.Split('@');
             Console.WriteLine(parts[0]);
         };
+        public static Action<string> GetUserNamesMutable = (s) =>
+        {
+            s.Remove(s.IndexOf('@'), 3);
+        };
         public static Action<List<string>> PrintCoolPeople = (l) =>
         {
             foreach (string s in l) Console.WriteLine(s);

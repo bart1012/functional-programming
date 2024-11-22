@@ -32,6 +32,7 @@
 
             //var filteredEmails = Exercises002.FilterEmails(emailList);
 
+<<<<<<< HEAD
             //foreach (var item in filteredEmails)
             //{
             //    Console.WriteLine(item.Key);
@@ -44,6 +45,9 @@
             Console.WriteLine(calculator.SumBy(p => p.Age)); // in this case we want to sum by age
             Console.WriteLine(calculator.SumBy(p => int.Parse(p.PhoneNumber))); // sum by phone number
             Console.WriteLine(calculator.SumBy(p => int.Parse(p.PhoneNumber) + p.Age)); // sum all the ages plus all the phone numbers in the list
+=======
+
+>>>>>>> b7600f99d8dba717fa6cd5ac23f2be2c94f99162
         }
     }
 }
