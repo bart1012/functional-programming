@@ -29,7 +29,6 @@ public class Tests
         //Assert
 
         result.Should().Be(16);
-
     }
 
     [TestCase(TestName = "GrammarCheck Test")]

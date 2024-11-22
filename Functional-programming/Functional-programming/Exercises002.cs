@@ -1,6 +1,6 @@
 ﻿namespace Functional_programming
 {
-    internal static class Exercises002
+    public static class Exercises002
     {
         public static Func<List<string>> GetCoolPeople = () => [
             "rich.neat@boardgamer.com",
