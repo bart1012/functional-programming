@@ -10,10 +10,12 @@
             //words.ForEach(x => Console.WriteLine(Exercises001.GrammarCheck(x)));
             //Console.WriteLine(Exercises001.SumIndices("start", "pale"));
             //Console.WriteLine(Exercises001.CheckValidEmail("rich1222@northcoders.co.uk"));
-            Console.WriteLine(String.Join(", \n", Exercises002.GetCoolPeople()));
-            List<string> list = Exercises002.GetCoolPeople();
-            Exercises002.PrintCoolPeople(list);
+            //Console.WriteLine(String.Join(", \n", Exercises002.GetCoolPeople()));
+            //List<string> list = Exercises002.GetCoolPeople();
+            //Exercises002.PrintCoolPeople(list);
             //list.ForEach(x => Exercises002.GetUserNames(x));
+            List<int> numList = new List<int> { 5, 8, 3, 6, 67 };
+            Exercises002.PrintSquaredNums(numList);
         }
     }
 }
