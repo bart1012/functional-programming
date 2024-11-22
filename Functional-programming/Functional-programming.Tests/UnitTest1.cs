@@ -57,4 +57,65 @@ public class Tests
         result.Should().Be("Email domain and user valid, please continue\r\n");
 
     }
+
+    [TestCase(TestName = "GetCoolPeople Test")]
+    public void Exercises002_GetCoolPeople_Should_return_filled_list()
+    {
+
+        //Act
+        List<string> result = Exercises002.GetCoolPeople();
+
+        //Assert
+        result.Should().BeEquivalentTo(new List<string>() {"rich.neat@boardgamer.com",
+            "poppy.mcdonnell@irishdancer.com",
+            "neil.hughes@walkingoncustard.com",
+            "alice.yang@midfielder.com",
+            "pippa.austin@musician.com"});
+    }
+
+    [TestCase(TestName = "SquaredNumbers Test")]
+    public void Exercises002_SquaredNums_return_squaredNums()
+    {
+        List<int> nums = new List<int>() { 1, 2, 3, 4, 5 };
+
+        //Act
+        Exercises002.SquaredNums(nums);
+
+        //Assert
+        nums.Should().BeEquivalentTo(new List<int>() { 1, 4, 9, 16, 25 });
+
+    }
+
+    [TestCase(TestName = "FilterEmails Test")]
+    public void Exercises002_FilterEmails_return_Dictionary()
+    {
+        Dictionary<string, List<string>> expectedDictionary = new Dictionary<string, List<string>>();
+        expectedDictionary[".co.uk"] = new List<String>() { "link@hyrule.co.uk", "ziggy@spidersfrommars.co.uk" };
+        expectedDictionary[".com"] = new List<String>() { "alice.yang@northcoders.com", "richard.neat@northcoders.com", "shrek@duloc.com", "neil.hughes@walkingoncustard.com", };
+        expectedDictionary["invalid"] = new List<String>() { "mario@plumbing.it", "csharp@microsoft.cs", "lemmy@motorhead.co,uk", "me@myhouse.sleep" };
+
+
+
+        List<string> emailList = new List<string>
+                {
+                    "alice.yang@northcoders.com",
+                    "richard.neat@northcoders.com",
+                    "mario@plumbing.it",
+                    "link@hyrule.co.uk",
+                    "shrek@duloc.com",
+                    "neil.hughes@walkingoncustard.com",
+                    "csharp@microsoft.cs",
+                    "ziggy@spidersfrommars.co.uk",
+                    "lemmy@motorhead.co,uk",
+                    "me@myhouse.sleep"
+                };
+
+        //Act
+        var result = Exercises002.FilterEmails(emailList);
+
+
+        //Assert
+        result.Should().BeEquivalentTo(expectedDictionary);
+
+    }
 }

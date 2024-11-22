@@ -1,6 +1,6 @@
 ﻿namespace Functional_programming
 {
-    internal static class Exercises002
+    public static class Exercises002
     {
         public static Func<List<string>> GetCoolPeople = () => [
             "rich.neat@boardgamer.com",
@@ -13,6 +13,10 @@
         {
             string[] parts = s.Split('@');
             Console.WriteLine(parts[0]);
+        };
+        public static Action<string> GetUserNamesMutable = (s) =>
+        {
+            s.Remove(s.IndexOf('@'), 3);
         };
         public static Action<List<string>> PrintCoolPeople = (l) =>
         {
