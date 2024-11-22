@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Exercises001 ex = new();
+            ex.Run();
         }
     }
 }
