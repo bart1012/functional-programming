@@ -8,6 +8,8 @@
             results.ForEach(x => Console.WriteLine(x));
             List<string> words = new List<string> { "Amazing!", "apple!", "Awesome!", "Artichoke" };
             words.ForEach(x => Console.WriteLine(Exercises001.GrammarCheck(x)));
+            Console.WriteLine(Exercises001.SumIndices("start", "pale"));
+            Console.WriteLine(Exercises001.CheckValidEmail("rich1222@northcoders.co.uk"));
         }
     }
 }
